@@ -1,0 +1,12 @@
+$blue-darken: #124f83;
+
+.header-image {
+    height: 300px;
+    & img {
+        object-position: top center;
+    }
+}
+
+.header-image-splitter {
+    margin-top: 175px;
+}

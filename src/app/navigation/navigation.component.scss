@@ -1,0 +1,123 @@
+$blue-darken: #124f83;
+
+.top-details-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    padding: 10px 0;
+    z-index: 5;
+    & .tel,
+    & .email {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & svg {
+            width: 25px;
+            height: 25px;
+            fill: white;
+            margin: 0 5px;
+            & g {
+                fill: white;
+            }
+        }
+        & a {
+            text-decoration: none;
+        }
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    transition: background-color 0.1s ease-in;
+    & .brand {
+        & img {
+            width: 175px;
+            height: 77px;
+            border-radius: 3px;
+        }
+    }
+
+    & .nav-list {
+        & li {
+            margin: 5px 0;
+        }
+        & li.active {
+            border-radius: 5px !important;
+            & a {
+                border-radius: 1px;
+            }
+        }
+    }
+
+    & .house-dropdown {
+        position: relative;
+    }
+
+    & .house-dropdown-item {
+        display: none;
+        position: absolute;
+        top: 180%;
+        right: -50%;
+        background-color: transparent;
+        padding: 20px;
+        list-style-type: none;
+        z-index: 100;
+        text-align: center;
+
+        & li.active {
+            & a {
+                text-decoration: none;
+                background: transparent;
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+        }
+
+        & .nav-link {
+            color: white;
+        }
+
+        & .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        & svg {
+            cursor: default;
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            z-index: -1;
+            & path {
+                fill: $blue-darken;
+            }
+        }
+    }
+
+    & .house-dropdown-item.active {
+        display: block;
+    }
+
+    & .house-dropdown:hover {
+        cursor: pointer;
+        & .house-dropdown-item {
+            display: block;
+        }
+    }
+
+    & .mobile {
+        & .mobile-list {
+            & .active {
+                & a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

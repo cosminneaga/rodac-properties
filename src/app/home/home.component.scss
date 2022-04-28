@@ -1,0 +1,72 @@
+$blue-darken: #124f83;
+
+.services {
+    line-height: 1.5;
+    position: relative;
+    & .section-one {
+        background-color: $blue-darken;
+    }
+    & .section-three {
+        & .title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            & span {
+                margin: 0 30px;
+            }
+            & .separator {
+                display: table;
+                height: 0;
+                width: 20%;
+                border: 1px solid $blue-darken;
+            }
+        }
+        & .messages {
+            & .item {
+                padding: 0 5px;
+                text-align: left;
+                margin: 20px 0;
+                & .message-title {
+                    font-size: 24px;
+                    color: $blue-darken;
+                    padding: 10px 0;
+                    font-weight: bold;
+                }
+                & .message {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.faq {
+    line-height: 1.5;
+    & .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & span {
+            margin: 0 30px;
+        }
+        & .separator {
+            display: table;
+            height: 0;
+            width: 20%;
+            border: 1px solid $blue-darken;
+        }
+    }
+    & .rubric {
+        margin: 20px 0;
+        & .title {
+            color: $blue-darken;
+        }
+        & .message {
+            & ol {
+                list-style: lower-alpha;
+            }
+        }
+    }
+}
